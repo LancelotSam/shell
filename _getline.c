@@ -1,7 +1,7 @@
 #include <shell.h>
 /**
  * _getline-this is the main function
- * 
+ *
  * it gets the input from std
  * @lineptr:ptr to a ptr to the memory location of storing input
  * @n:the size of the memory location
@@ -14,7 +14,7 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 	ssize_t read_chars;
 	int current_position = 0;
 
-	if (*lineptr == NULL || n == NULL || stream == NULL)
+	if (lineptr == NULL || n == NULL || stream == NULL)
 	{
 		perror("invalid parameters");
 		return (-1);
