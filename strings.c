@@ -13,10 +13,10 @@ char *_strdup(const char *src)
 	char *p;
 
 	if (src == NULL)
-		return(NULL);
+		return (NULL);
 	while (src[len])
 	{
-		len++:
+		len++;
 	}
 	/*allocate memory to store duplice*/
 	str = malloc(len + 1);
@@ -24,7 +24,7 @@ char *_strdup(const char *src)
 	if (str == NULL)
 	{
 		perror("mem allocation failed");
-		return(NULL);
+		return (NULL);
 	}
 	/*since you cannot manipulate str, assign it to a pointer*/
 	p = str;
@@ -49,6 +49,7 @@ char *_strdup(const char *src)
 char *_strcpy(char *dest, const char *src)
 {
 	int i = 0;
+
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -68,7 +69,7 @@ char *_strcpy(char *dest, const char *src)
  */
 int _strlen(const char *str)
 {
-	int index =0;
+	int index = 0;
 
 	if (*str == '\0')
 		return (0);

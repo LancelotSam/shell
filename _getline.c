@@ -1,4 +1,4 @@
-#include <shell.h>
+#include "shell.h"
 /**
  * _getline-this is the main function
  *
@@ -27,7 +27,7 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 		if (*lineptr == NULL)
 		{
 			perror("memory allocation failed");
-			return (NULL);
+			return (-1);
 		}
 	}
 	/*now get characters from lineptr*/
@@ -43,7 +43,7 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 			if (new_buff == NULL)
 			{
 				perror("Mem reallocation failed");
-				return (NULL);
+				return (-1);
 			}
 			*lineptr = new_buff;
 		}
