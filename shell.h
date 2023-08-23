@@ -16,5 +16,7 @@ char *_strcpy(char *dest, const char *src);
 int _strlen(const char *str);
 int _strcmp(const char *s1, const char *s2, size_t n);
 char *_strcat(char *dest, const char *src);
+int _atoi(const char *str);
+int my_exit(char *args[]);
 
 #endif
