@@ -8,13 +8,13 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	char *lineptr;
 	size_t n;
 
-	n = 0;
+	n = 0;/*allocates a buff for string*/
 
 	printf("%s", prompt);
 	getline(&lineptr, &n, stdin);
 	/*& passes value to getline*/
 	printf("%s", lineptr);
-	free(lineptr);
+	free(lineptr);/*free buffer*/
 
 	return (0);
 }

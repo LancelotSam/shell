@@ -57,6 +57,8 @@ const char *_strtok(const char *str, const char *delim)
 {
 	static const char *last_token = NULL;
 	const char *current_token = NULL;
+	size_t token_length;
+	char *token_copy;
 
 	if (str != NULL)
 		last_token = str;
@@ -79,11 +81,11 @@ const char *_strtok(const char *str, const char *delim)
 	{ /*check end of current tok*/
 		str++;
 	}
-	size_t token_length = str - current_token;
+	token_length = str - current_token;
 
 	last_token = str + 1;
 
-	char *token_copy = malloc(token_length + 1);
+	token_copy = malloc(token_length + 1);
 
 	if (token_copy == NULL)
 		return (NULL);
