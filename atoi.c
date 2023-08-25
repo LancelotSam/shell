@@ -69,5 +69,5 @@ output = -result;
 else
 output = result;
 
-return (ouput);
+return (output);
 }
